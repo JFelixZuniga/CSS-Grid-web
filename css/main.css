@@ -1,0 +1,182 @@
+/*Basic reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+  --claro: #32e0c4;
+  --oscuro: #0d7377;
+  --intermedio: #008891;
+}
+
+/* Global styles */
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.contenedor {
+  margin: 0 auto;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+/************* Header *************/
+.header__contenido {
+  position: relative;
+  z-index: 100;
+}
+.logo {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 1rem;
+  font-family: Cambria, serif;
+  color: #fff;
+}
+.banner {
+  height: 100vh;
+  margin-top: -6rem;
+  position: relative;
+  background: url("../img/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banner__descripcion {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin-top: 2.5rem;
+  text-shadow: 0 0 6px var(--claro);
+}
+.button__banner {
+  text-transform: uppercase;
+  background: var(--oscuro);
+  border: none;
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 1rem;
+  transition: background 0.3s ease-in-out;
+  display: inline-block;
+}
+.button__banner:hover {
+  background: var(--intermedio);
+}
+
+/************* Galeria *************/
+.galeria h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.galeria {
+  margin: 1rem;
+}
+.galeria img {
+  border-radius: 0.5rem;
+}
+
+/************* Equipo *************/
+.team h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.team {
+  background: #eeeeee;
+  padding: 3rem;
+}
+.team__grid {
+  display: grid;
+  gap: 3rem;
+}
+.team__columna img {
+  border-radius: 50%;
+}
+.team p {
+  text-align: justify;
+}
+
+/************* Información *************/
+.info {
+  text-align: center;
+}
+.info h4 {
+  color: var(--oscuro);
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+.info p {
+  color: var(--claro);
+  /* font-size: 3rem; */
+  margin: 2rem 0;
+}
+.info__columna {
+  margin: 2rem;
+}
+.info .contenedor {
+  display: grid;
+  gap: 1rem;
+}
+
+/************* Banner 2 *************/
+.banner2 {
+  color: #fff;
+  height: 80vh;
+  position: relative;
+  background: url("../img/banner2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banner2 h1 {
+  font-size: 2.8rem;
+}
+.banner2__descripcion {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  text-shadow: 0 0 6px black;
+}
+.btn {
+  margin-top: 3rem;
+}
+
+/************* Footter *************/
+.footer {
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
+}
+@media only screen and (min-width: 520px) {
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team .team__grid {
+    
+  }
+}
